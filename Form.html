@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form</title>
+  
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+        integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="Form.css">
+</head>
+
+<body>
+    <div class="maincontent">
+        <form name="RegForm" class="form" style="border-radius: 40px;">
+
+            <div class="container">
+                <h1>Welcome</h1>
+                <hr>
+                <div class="body">
+                    <label>Name</label>
+                    <input type="text" name="Name" placeholder="Enter Name" required />
+                    <label>State</label>
+                    <select name="State" placeholder="Select State Name" id="states" required>
+                    </select>
+                    <label>Phone Number</label>
+                    <input type="number" placeholder="Enter Phone Number" name="Phone" onkeyup="checkPhone()" required>
+
+                    <label>Adhar Number</label>
+                    <input type="number" placeholder="Enter Adhar Number" name="Adhar" onkeyup="checkAdhar()" required>
+
+                    <label>PAN Number</label>
+                    <input type="text" placeholder="Enter PAN Number" name="Pan" onkeyup="myPan()" required>
+
+                    <label>Amount</label>
+                    <input type="number" placeholder="Enter Amount of Transaction" name="Amount" onkeyup="myAmount()" required>
+                </div>
+                <button type="button" class="registerbtn" onclick="validation()" id="h">Submit</button>
+                <!-- <input type="button" value="Submit" onclick="pressed()" id="h" />   -->
+            </div>
+
+        </form>
+        <div class="divider"></div>
+        <div class="rightpane">
+            <div class="section">
+                <div class="heading" id="north">North Area</div>
+                <ol class="content" id="ncontent"></ol>
+            </div>
+            <div class="section">
+                <div class="heading" id="east">East Area</div>
+                <ol class="content" id="econtent"></ol>
+            </div>
+            <div class="section">
+                <div class="heading" id="west">West Area</div>
+                <ol class="content" id="wcontent"></ol>
+            </div>
+            <div class="section">
+                <div class="heading">Central Area</div>
+                <ol class="content" id="ccontent"></ol>
+            </div>
+            <div class="section">
+                <div class="heading" id="south">South Area</div>
+                <ol class="content" id="scontent"></ol>
+            </div>
+        </div>
+    </div>
+    <div id="snackbar">Some text some message..</div>
+</body>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script src="Form.js"></script>
+
+</html>
